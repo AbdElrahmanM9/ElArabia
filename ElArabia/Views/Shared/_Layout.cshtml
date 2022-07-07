@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El-Arabia - @ViewBag.Title</title>
+    <link rel="icon" href="~/img/All logo/gold sahdaow.png" /><!--Logo-->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/slick.css" rel="stylesheet" />
+    <link href="~/css/slick-theme.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/checkout.js"></script>
+    <script src="~/js/toast.min.js"></script>
+
+    <style>
+        .Black {
+            color: #000000;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="~/Home/Index"><img src="~/img/All logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@ElArabia.Resource.StoreAr.OurCheese <span class="sr-only">(current)</span></a>
+                        <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu" style="background-color:#a09b9b">
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2 m-md-2">Colla (Italia)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2 m-md-2">Action</a></li>
+                                    <li><a href="#" class="Black m-md-2 m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2 m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2">DairyGold (Italia)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2">Hajdu (Italia)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#"class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#"class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2">Huizer (Italia)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2">friendship (Italia)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black m-md-2">Antiche Latterie</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@ElArabia.Resource.StoreAr.OurRecipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@ElArabia.Resource.StoreAr.OurStory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("Index", "Admin")'">@ElArabia.Resource.StoreAr.CheeseMagic</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container my-3">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container body-content" id="bodyFooter">
+            <div class="row" style="position: relative; ">
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-square IconFooter"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="float-right my-5" style="font-size: 25px;"><a style="color:Black m-md-2;" href="#" class="fa-solid fa-arrow-up-from-bracket" title="Back to top"></a></p>
+            <p id="Footer">&copy; El-Arabia - @DateTime.Now.Year</p>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery.min.js.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/custom.js"></script>
+</body>
+</html>
