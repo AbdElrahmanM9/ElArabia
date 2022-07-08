@@ -1,0 +1,27 @@
+﻿@model List<ElArabia.Models.Products>
+
+@{
+    ViewBag.Title = "All Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid padding my-lg-5">
+    <div class="row padding">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 col-sm-6 my-lg-5">
+                <div class="product-grid3">
+                    <div class="product-image3">
+                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = item.NameEn})'">
+                            <img class="pic-1" src="@Url.Content(item.Image)" style="width:100%;">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="title">@item.NameAr</h3>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

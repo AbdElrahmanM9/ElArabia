@@ -393,3 +393,10 @@ D:\ASP.NET\Projects\ElArabia\ElArabia\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Login\Login.cshtml.g.cs
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Register\Register.cshtml.g.cs
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.csproj.AssemblyReference.cache
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.Resource.Store.resources
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AddNewProduct.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutAdmin.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AllProducts.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditItem.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_AllKindsCheese.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ResultSearch.cshtml.g.cs

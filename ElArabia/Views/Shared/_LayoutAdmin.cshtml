@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El-Arabia - @ViewBag.Title</title>
+    <link rel="icon" href="~/img/All logo/gold sahdaow.png" /><!--Logo-->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/all.min.css" rel="stylesheet" />
+    <link href="~/css/slick.css" rel="stylesheet" />
+    <link href="~/css/slick-theme.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/checkout.js"></script>
+    <script src="~/js/toast.min.js"></script>
+
+    <style>
+        .Black {
+            color: #000000;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="~/Admin/Index"><img src="~/img/All logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProduct", "Admin")'">@ElArabia.Resource.StoreAr.AddProduct</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProducts", "Admin")'">@ElArabia.Resource.StoreAr.AllProducts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("Index", "Admin")'">@ElArabia.Resource.StoreAr.EditSlideshow</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container my-3">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container body-content" id="bodyFooter">
+            <div class="row" style="position: relative; ">
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-square IconFooter"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 my-5">
+                    <a href="#">
+                        <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="float-right my-5" style="font-size: 25px;"><a style="color:Black m-md-2;" href="#" class="fa-solid fa-arrow-up-from-bracket" title="Back to top"></a></p>
+            <p id="Footer">&copy; El-Arabia - @DateTime.Now.Year</p>
+        </div>
+    </footer>
+
+    <script src="~/js/jquery.min.js.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/custom.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El-Arabia - @ViewBag.Title</title>
-    <link rel="icon" href="~/img/All logo/gold sahdaow.png" /><!--Logo-->
+    <link rel="icon" href="~/Images/Logo/gold sahdaow.png" /><!--Logo-->
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/all.min.css" rel="stylesheet" />
     <link href="~/css/slick.css" rel="stylesheet" />
@@ -15,17 +15,13 @@
     <script src="~/js/toast.min.js"></script>
 
     <style>
-        .Black {
-            color: #000000;
-        }
 
-        
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="~/Home/Index"><img src="~/img/All logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
+            <a class="navbar-brand" href="~/Home/Index"><img src="~/Images/Logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,51 +31,73 @@
                         <a class="nav-link dropdown-toggle" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@ElArabia.Resource.StoreAr.OurCheese <span class="sr-only">(current)</span></a>
                         <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu" style="background-color:#a09b9b">
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2 m-md-2">Colla (Italia)</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2 m-md-2">Colla (Italia)</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2 m-md-2">Action</a></li>
-                                    <li><a href="#" class="Black m-md-2 m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2 m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2 m-md-2">Hard Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Grana Padano"})'" class="Black m-md-2 m-md-2">Grana Padano</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Parmigiano Reggiano"})'" class="Black m-md-2 m-md-2">Parmigiano Reggiano</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Pecorino Romano"})'" class="Black m-md-2 m-md-2">Pecorino Romano</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Provolone Picante"})'" class="Black m-md-2 m-md-2">Provolone Picante</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2">DairyGold (Italia)</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">Huizer-Kaas (Italia)</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Cheese"})'" class="Black m-md-2">Gouda Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Cheese4.5Kg"})'" class="Black m-md-2">Gouda Cheese4.5Kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Old Cheese"})'" class="Black m-md-2">Gouda Old Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Lite Cheese"})'" class="Black m-md-2">Gouda Lite Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Huizer Kaas-Gilde Cumin4.5kg"})'" class="Black m-md-2">Huizer Kaas-Gilde Cumin4.5kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Olive Tomato Cheese"})'" class="Black m-md-2">Gouda Olive Tomato Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Chili Cheese4.5Kg"})'" class="Black m-md-2">Gouda Chili Cheese4.5Kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda Goat Cheese4.5Kg"})'" class="Black m-md-2">Gouda Goat Cheese4.5Kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Goat With Chili Cheese4.5Kg"})'" class="Black m-md-2">Goat With Chili Cheese4.5Kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Maasdam Cheese"})'" class="Black m-md-2">Maasdam Cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Gouda With Dill Cheese4.5Kg"})'" class="Black m-md-2">Gouda With Dill Cheese4.5Kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Edam loaf 3kg"})'" class="Black m-md-2">Edam loaf3kg</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Emmental loaf 3kg"})'" class="Black m-md-2">Emmental loaf3kg</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2">Hajdu (Italia)</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">Hajdu (Italia)</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#"class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#"class="Black m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hungarian labneh"})'" class="Black m-md-2">Hungarian labneh </a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2">Huizer (Italia)</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">Kaptein (Italia)</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2">friendship (Italia)</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">Deer (Italia)</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Mozzarella cheese"})'" class="Black m-md-2">Mozzarella cheese</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Cheddar Low Fat"})'" class="Black m-md-2">Cheddar Low Fat</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Red Cheddar"})'" class="Black m-md-2">Red Cheddar</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = ">White Cheddar"})'" class="Black m-md-2">White Cheddar</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Red Cheddar Low Fat"})'" class="Black m-md-2">Red Cheddar Low Fat </a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#" class="Black m-md-2">Antiche Latterie</a>
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">FriendShip</a>
                                 <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
-                                    <li><a href="#" class="Black m-md-2">Second level</a></li>
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#" class="Black0 m-md-2">Gourmino</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
+                                    <li><a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = "Hard Cheese"})'" class="Black m-md-2">Second level</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -95,17 +113,20 @@
                         <a class="nav-link" onclick="location.href='@Url.Action("Index", "Admin")'">@ElArabia.Resource.StoreAr.CheeseMagic</a>
                     </li>
                 </ul>
-                <form class="form-inline mt-2 mt-md-0">
+                @*<form class="form-inline mt-2 mt-md-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>*@
+                <form asp-controller="Home" asp-action="Search">
+                    <input class="form-control mr-sm-2" type="text" name="SearchString" placeholder="Search" />
                 </form>
             </div>
         </nav>
 
     </header>
 
-    <div class="container my-3">
-        <main role="main" class="pb-3">
+    <div class="container my-5">
+        <main role="main" class="pb-3 my-lg-5">
             @RenderBody()
         </main>
     </div>

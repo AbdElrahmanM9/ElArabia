@@ -10,7 +10,7 @@
     }
 </style>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide my-5" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -58,7 +58,7 @@
             <span class="featurette-heading">مليئة بالنكهة والطعم الطبيعي</span>
             <h2 class="gp__title title title--3">%شهيّة بطبيعتها 100 </h2>
             <p class="lead">جبنة فريكو مليئة بطعم السعادة، ورائحة المراعي الخضراء الجميلة، وصوت البقر الناعم، ولمسة من العشب الطازج. انها جبنة تجمع كل حواسنا.</p>
-            <p class="gp__description"><a class="gp__cta btn btn--orange" href="#" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
+            <p class="gp__description"><a class="gp__cta btn btn--orange" onclick="location.href='@Url.Action("_AllKindsCheese", "Home")'" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
         </div>
         <div class="col-md-5">
             <a class="bd-placeholder-img" href="#">
@@ -107,7 +107,7 @@
             {
                 <div class="card">
                     <div class="card-header">
-                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {BrandId = item.Id})'">
+                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = item.NameEn})'">
                             <img class="pic-1" src="@Url.Content(item.Image)">
                         </a>
                     </div>

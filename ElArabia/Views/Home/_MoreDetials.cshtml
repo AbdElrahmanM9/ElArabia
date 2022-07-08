@@ -1,4 +1,4 @@
-﻿@model List<ElArabia.Models.Products>
+﻿@model ElArabia.ViewModel.ItemsListViewModel
 
 @{
     ViewBag.Title = "More Detials";
@@ -7,14 +7,14 @@
 
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light my-5">
 
-    <img class="pic-1 m-5" src="@Url.Content(Model.FirstOrDefault().Image)" style=" height: 300px; border-radius: 21px 21px 0 0;">
-    <h1 class="display-4 font-weight-normal">@Model.FirstOrDefault().NameAr</h1>
-    <p class="lead font-weight-normal">@Model.FirstOrDefault().Description</p>
+    <img class="pic-1 m-5" src="@Url.Content(Model.product.Image)" style=" height: 300px; border-radius: 21px 21px 0 0;">
+    <h1 class="display-4 font-weight-normal">@Model.product.NameAr</h1>
+    <p class="lead font-weight-normal">@Model.product.Description</p>
     <a class="btn btn-outline-secondary" href="#">طريقة التحضير</a>
 
 </div>
 
-<div class="d-md-Flexx flex-md-equal w-100 my-md-3 pl-md-3">
+@*<div class="d-md-Flexx flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <div class="my-3 p-3">
             <h2 class="display-5">@Model.LastOrDefault().NameAr</h2>
@@ -29,23 +29,26 @@
         </div>
         <img class="pic-1 m-5" src="@Url.Content(Model.FirstOrDefault().Image)" style="width:80%; height: 300px; border-radius: 21px 21px 0 0;">
     </div>
-</div>
-
-
-@*<div class="d-md-Flexx flex-md-equal w-100 my-md-3 pl-md-3">
-
-    @foreach (var item in Model)
-    {
-        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-
-            <div class="my-3 p-3">
-                <h2 class="display-5">@item.NameAr</h2>
-                <p class="lead">@item.Description</p>
-            </div>
-            <div class="bg-dark shadow-sm mx-auto">
-                <img class="pic-1" src="@Url.Content(item.Image)" style="width: 50%; height: 300px; border-radius: 21px 21px 0 0;">
-            </div>
-
-        </div>
-    }
 </div>*@
+
+<div class="DivFore2">
+    <div class="container">
+        <div class="carousel5">
+            @foreach (var item in Model.products)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = item.NameEn})'">
+                            <img class="pic-1" src="@Url.Content(item.Image)">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <div class="card-title"><h3>@item.NameAr</h3></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

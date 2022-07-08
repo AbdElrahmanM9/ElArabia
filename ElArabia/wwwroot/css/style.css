@@ -757,3 +757,15 @@ body {
 .slick-arrow.slick-hidden {
     display: none;
 }
+/*---------------------------------------------------------------dropdown---------------------------------------------------*/
+.dropdown-menu {
+    min-width: 14rem;
+}
+
+.Black0 {
+    color: #000000;
+    margin: 1.5rem !important;
+}
+.Black {
+    color: #000000;
+}

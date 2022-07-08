@@ -1,6 +1,8 @@
 ﻿using ElArabia.Data;
 using ElArabia.Models;
+using ElArabia.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -27,12 +29,57 @@ namespace ElArabia.Controllers
             return View(Brands);
         }
 
-        public ActionResult _MoreDetials(int BrandId) 
+        public ActionResult _MoreDetials(string NameEn)
         {
-            var Products = _Context.Products.Where(x => x.BrandId == BrandId).ToList();
+            ItemsListViewModel ItemsListViewModel = new ItemsListViewModel();
+
+            ItemsListViewModel.product = _Context.Products.Include(x=>x.Brand).FirstOrDefault(x => x.NameEn.Contains(NameEn)||x.Brand.NameEn.Contains(NameEn));
+            if (ItemsListViewModel.product != null)
+            {
+                ItemsListViewModel.products = _Context.Products.Where(x => x.BrandId == ItemsListViewModel.product.BrandId).ToList();
+
+                return PartialView(ItemsListViewModel);
+            }
+
+            return RedirectToAction("Index");
+
+        }
+        public ActionResult _AllKindsCheese()
+        {
+            List<Products> Products = new List<Products>();
+            var Brands = _Context.BrandsModel.ToList();
+
+            foreach (var item in Brands)
+            {
+                Products Product = new Products();
+                var Pro = _Context.Products.FirstOrDefault(x => x.BrandId == item.Id);
+                Product.NameEn = Pro != null ? Pro.NameEn : "";
+                Product.NameAr = Pro != null ? Pro.NameAr : "";
+                Product.Image = Pro != null ? Pro.Image : "";
+                if (Pro != null)
+                {
+                    Products.Add(Product);
+                }
+            }
             return PartialView(Products);
         }
+        public async Task<IActionResult> Search(string searchString)
+        {
+            var Items = from m in _Context.Products
+                        select m;
 
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                Items = Items.Where(s => s.NameAr.Contains(searchString) || s.NameEn.Contains(searchString) || s.Description.Contains(searchString));
+            }
+
+            var ItemsModel = new ItemsListViewModel
+            {
+                products = await Items.ToListAsync()
+            };
+
+            return PartialView("_ResultSearch", ItemsModel);
+        }
         public IActionResult Privacy()
         {
             return View();

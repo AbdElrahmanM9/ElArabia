@@ -15,6 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resource\Store.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Store.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resource\StoreAr.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -23,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resource\Store.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Store.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resource\StoreAr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StoreAr.Designer.cs</LastGenOutput>
