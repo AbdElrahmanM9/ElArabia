@@ -35,7 +35,7 @@ body {
     }
 .slick-prev,
 .slick-next {
-    background: #000b48;
+    background: #f9c623;
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -45,7 +45,7 @@ body {
     .slick-prev:focus,
     .slick-next:hover,
     .slick-next:focus {
-        background: #000b48;
+        background: #f9c623;
     }
 
 /* MARKETING CONTENT
@@ -367,7 +367,9 @@ ul {
     .dropdown-submenu:hover > .dropdown-menu {
         display: block;
     }
-
+.navbar-dark .navbar-nav .nav-link {
+    color: #000b48;
+}
     .dropdown-submenu > a:after {
         display: block;
         content: " ";
@@ -377,7 +379,7 @@ ul {
         border-color: transparent;
         border-style: solid;
         border-width: 5px 0 5px 5px;
-        border-left-color: #ccc;
+        border-left-color: #000;
         margin-top: 5px;
         margin-right: -10px;
     }
@@ -695,7 +697,12 @@ body {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
+.slick-prev {
+    left: -44px;
+}
+.slick-next {
+    right: -44px;
+}
 .slick-track {
     position: relative;
     top: 0;
@@ -712,7 +719,7 @@ body {
     .slick-track:after {
         clear: both;
     }
-
+/*#f9c623*/
 .slick-loading .slick-track {
     visibility: hidden;
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El-Arabia - @ViewBag.Title</title>
-    <link rel="icon" href="~/img/All logo/gold sahdaow.png" /><!--Logo-->
+    <link rel="icon" href="~/Images/Logo/gold sahdaow.png" /><!--Logo-->
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/all.min.css" rel="stylesheet" />
     <link href="~/css/slick.css" rel="stylesheet" />
@@ -23,20 +23,17 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="~/Admin/Index"><img src="~/img/All logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
+            <a class="navbar-brand" href="~/Admin/Index"><img src="~/Images/Logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProduct", "Admin")'">@ElArabia.Resource.StoreAr.AddProduct</a>
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProduct", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AddProduct</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProducts", "Admin")'">@ElArabia.Resource.StoreAr.AllProducts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="location.href='@Url.Action("Index", "Admin")'">@ElArabia.Resource.StoreAr.EditSlideshow</a>
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProducts", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AllProducts</a>
                     </li>
                 </ul>
             </div>

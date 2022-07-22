@@ -10,26 +10,14 @@
     <img class="pic-1 m-5" src="@Url.Content(Model.product.Image)" style=" height: 300px; border-radius: 21px 21px 0 0;">
     <h1 class="display-4 font-weight-normal">@Model.product.NameAr</h1>
     <p class="lead font-weight-normal">@Model.product.Description</p>
-    <a class="btn btn-outline-secondary" href="#">طريقة التحضير</a>
-
+    @if (@Model.product.Prepare != "#")
+    {
+        <a class="btn btn-outline-secondary" src="#" target="_blank" href="@Model.product.Prepare">طريقة التحضير</a>
+    }else
+    {
+        <a class="btn btn-outline-secondary" src="#" href="@Model.product.Prepare">طريقة التحضير</a>
+    }
 </div>
-
-@*<div class="d-md-Flexx flex-md-equal w-100 my-md-3 pl-md-3">
-    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-            <h2 class="display-5">@Model.LastOrDefault().NameAr</h2>
-            <p class="lead">@Model.LastOrDefault().Description</p>
-        </div>
-        <img class="pic-1 m-5" src="@Url.Content(Model.LastOrDefault().Image)" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-    </div>
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-            <h2 class="display-5">@Model.FirstOrDefault().NameAr</h2>
-            <p class="lead">@Model.FirstOrDefault().Description</p>
-        </div>
-        <img class="pic-1 m-5" src="@Url.Content(Model.FirstOrDefault().Image)" style="width:80%; height: 300px; border-radius: 21px 21px 0 0;">
-    </div>
-</div>*@
 
 <div class="DivFore2">
     <div class="container">

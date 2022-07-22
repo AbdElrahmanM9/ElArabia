@@ -12,6 +12,10 @@ namespace ElArabia.Data
         public DbSet<BrandsModel> BrandsModel { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Products> Products { get; set; }
+        public DbSet<Header> Header { get; set; }
+        public DbSet<HomeModelOne> HomeModelOne { get; set; }
+        public DbSet<HomeModelTwo> HomeModelTwo { get; set; }
+        public DbSet<HomeModelThree> HomeModelThree { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

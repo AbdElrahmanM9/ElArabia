@@ -25,8 +25,47 @@ namespace ElArabia.Controllers
 
         public IActionResult Index()
         {
-            var Brands = _Context.BrandsModel.ToList();
-            return View(Brands);
+            int Counter = 1;
+
+            HomePageViewModel HomePageViewModel = new HomePageViewModel();
+            HeaderViewModel header = new HeaderViewModel();
+
+            var Header = _Context.Header.Where(x => x.IsActive == true && x.IsDeleted == false).ToList();
+            foreach (var item in Header)
+            {
+                if (Counter == 1)
+                {
+                    header.IMG1 = item.IMG;
+                }
+                if (Counter == 2)
+                {
+                    header.IMG2 = item.IMG;
+                }
+                if (Counter == 3)
+                {
+                    header.IMG3 = item.IMG;
+                }
+                if (Counter == 4)
+                {
+                    header.IMG4 = item.IMG;
+                }
+                if (Counter == 5)
+                {
+                    header.IMG5 = item.IMG;
+                }
+                if (Counter == 6)
+                {
+                    header.IMG6 = item.IMG;
+                }
+                Counter++;
+            }
+            HomePageViewModel.Header = header;
+            HomePageViewModel.HomeModelOne = _Context.HomeModelOne.FirstOrDefault();
+            HomePageViewModel.HomeModelTwo = _Context.HomeModelTwo.FirstOrDefault();
+            HomePageViewModel.HomeModelThree = _Context.HomeModelThree.FirstOrDefault();
+            HomePageViewModel.BrandsModel = _Context.BrandsModel.ToList();
+
+            return View(HomePageViewModel);
         }
 
         public ActionResult _MoreDetials(string NameEn)
@@ -36,8 +75,11 @@ namespace ElArabia.Controllers
             ItemsListViewModel.product = _Context.Products.Include(x=>x.Brand).FirstOrDefault(x => x.NameEn.Contains(NameEn)||x.Brand.NameEn.Contains(NameEn));
             if (ItemsListViewModel.product != null)
             {
-                ItemsListViewModel.products = _Context.Products.Where(x => x.BrandId == ItemsListViewModel.product.BrandId).ToList();
-
+                ItemsListViewModel.products = _Context.Products.Where(x => x.BrandId == ItemsListViewModel.product.BrandId && x.IsDeleted == false && x.IsActive == true).ToList();
+                foreach (var item in ItemsListViewModel.products)
+                {
+                    item.Prepare = item.Prepare != null ? item.Prepare : "#";
+                }
                 return PartialView(ItemsListViewModel);
             }
 
@@ -47,20 +89,23 @@ namespace ElArabia.Controllers
         public ActionResult _AllKindsCheese()
         {
             List<Products> Products = new List<Products>();
-            var Brands = _Context.BrandsModel.ToList();
 
-            foreach (var item in Brands)
-            {
-                Products Product = new Products();
-                var Pro = _Context.Products.FirstOrDefault(x => x.BrandId == item.Id);
-                Product.NameEn = Pro != null ? Pro.NameEn : "";
-                Product.NameAr = Pro != null ? Pro.NameAr : "";
-                Product.Image = Pro != null ? Pro.Image : "";
-                if (Pro != null)
-                {
-                    Products.Add(Product);
-                }
-            }
+            //var Brands = _Context.BrandsModel.ToList();
+
+            //foreach (var item in Brands)
+            //{
+            //    Products Product = new Products();
+            //    var Pro = _Context.Products.FirstOrDefault(x => x.BrandId == item.Id);
+            //    Product.NameEn = Pro != null ? Pro.NameEn : "";
+            //    Product.NameAr = Pro != null ? Pro.NameAr : "";
+            //    Product.Image = Pro != null ? Pro.Image : "";
+            //    if (Pro != null)
+            //    {
+            //        Products.Add(Product);
+            //    }
+            //}
+
+            Products = _Context.Products.Where(x => x.IsActive == true && x.IsDeleted == false).ToList();
             return PartialView(Products);
         }
         public async Task<IActionResult> Search(string searchString)

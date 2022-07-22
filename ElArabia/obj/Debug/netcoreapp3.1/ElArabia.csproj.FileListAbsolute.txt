@@ -400,3 +400,7 @@ D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditItem.cshtml.g.cs
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_AllKindsCheese.cshtml.g.cs
 D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ResultSearch.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditHeader.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelOne.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelThree.cshtml.g.cs
+D:\ASP.NET\Projects\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelTwo.cshtml.g.cs

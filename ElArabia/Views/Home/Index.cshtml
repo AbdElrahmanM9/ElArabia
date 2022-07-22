@@ -1,4 +1,4 @@
-﻿@model List<ElArabia.Models.BrandsModel>
+﻿@model ElArabia.ViewModel.HomePageViewModel
 @{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -21,24 +21,24 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="~/Images/Home/pecorino-pepato-ciresa.JPG" />
+            <img src="@Url.Content(Model.Header.IMG1)" />
             <div class="container">
             </div>
         </div>
         <div class="carousel-item">
-            <img src="~/Images/Home/side-1.jpg" />
+            <img src="@Url.Content(Model.Header.IMG2)" />
         </div>
         <div class="carousel-item">
-            <img src="~/Images/Home/WhatsApp Image 2021-10-30 at 12.37.57 PM (6).jpeg" />
+            <img src="@Url.Content(Model.Header.IMG3)" />
         </div>
         <div class="carousel-item">
-            <img src="~/Images/Home/WhatsApp Image 2021-10-30 at 12.37.57 PM (8).jpeg" />
+            <img src="@Url.Content(Model.Header.IMG4)" />
         </div>
         <div class="carousel-item">
-            <img src="~/Images/Home/side-2.jpg" />
+            <img src="@Url.Content(Model.Header.IMG5)" />
         </div>
         <div class="carousel-item">
-            <img src="~/Images/Home/WhatsApp Image 2021-10-30 at 12.37.57 PM (7).jpeg" />
+            <img src="@Url.Content(Model.Header.IMG6)" />
         </div>
 
     </div>
@@ -55,14 +55,13 @@
 <div class="container marketing my-5">
     <div class="row featurette">
         <div class="col-md-7">
-            <span class="featurette-heading">مليئة بالنكهة والطعم الطبيعي</span>
-            <h2 class="gp__title title title--3">%شهيّة بطبيعتها 100 </h2>
-            <p class="lead">جبنة فريكو مليئة بطعم السعادة، ورائحة المراعي الخضراء الجميلة، وصوت البقر الناعم، ولمسة من العشب الطازج. انها جبنة تجمع كل حواسنا.</p>
-            <p class="gp__description"><a class="gp__cta btn btn--orange" onclick="location.href='@Url.Action("_AllKindsCheese", "Home")'" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
+            <h2 class="gp__title title title--3">@Model.HomeModelOne.Title</h2>
+            <p class="lead">@Model.HomeModelOne.Description</p>
+            <p class="gp__description"><a class="gp__cta btn btn--orange" href="~/Home/_AllKindsCheese" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
         </div>
         <div class="col-md-5">
             <a class="bd-placeholder-img" href="#">
-                <img src="~/Images/Home/Detail1.png" />
+                <img src="@Url.Content(Model.HomeModelOne.IMG)" />
             </a>
         </div>
     </div>
@@ -71,12 +70,12 @@
 
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            <h2 class="featurette-heading">@Model.HomeModelTwo.Title</h2>
+            <p class="lead">@Model.HomeModelTwo.Description</p>
         </div>
         <div class="col-md-5 order-md-1">
             <a class="bd-placeholder-img" title="#" href="#">
-                <img src="~/Images/Home/DSC09357 copy.jpg" />
+                <img src="@Url.Content(Model.HomeModelTwo.IMG)" />
             </a>
 
         </div>
@@ -86,12 +85,12 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+            <h2 class="featurette-heading">@Model.HomeModelThree.Title</h2>
+            <p class="lead">@Model.HomeModelThree.Description</p>
         </div>
         <div class="col-md-5">
             <a class="bd-placeholder-img" title="#" href="#">
-                <img src="~/Images/Home/DSC09216.jpg" />
+                <img src="@Url.Content(Model.HomeModelThree.IMG)" />
             </a>
         </div>
     </div>
@@ -103,7 +102,7 @@
 <div class="DivFore2">
     <div class="container">
         <div class="carousel5">
-            @foreach (var item in Model)
+            @foreach (var item in Model.BrandsModel)
             {
                 <div class="card">
                     <div class="card-header">

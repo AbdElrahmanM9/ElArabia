@@ -1,0 +1,46 @@
+﻿@model List<ElArabia.Models.Header>
+
+@{
+    ViewBag.Title = "Edit Header";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid padding my-lg-5">
+    <div class="row padding">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3 col-sm-6 my-lg-5">
+                <div class="product-grid3">
+                    <div class="product-image3">
+                        <a>
+                            <img class="pic-1" src="@Url.Content(item.IMG)" style="width:100%;">
+                        </a>
+                    </div>
+                    <div class="product-content">
+                        <img onclick="location.href='@Url.Action("DeleteHeaderPhoto", "Admin", new { Id = item.Id })'" class="svg-icon" src="~/Images/018-delete.svg" title="delete" style="width: 17%;" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    @using (Html.BeginForm("AddNewPhotoInHeader", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "AddForm" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="bd-example5 my-5" id="ItemsTable">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+            <div class="form-group">
+                <div class="col-md-10">
+                    <input type="file" name="upload" class="control-label col-md-4 subscribe btn btn-light btn-lg btn-block" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
