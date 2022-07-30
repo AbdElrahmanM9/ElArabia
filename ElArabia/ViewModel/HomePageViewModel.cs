@@ -9,6 +9,7 @@ namespace ElArabia.ViewModel
     public class HomePageViewModel
     {
         public List<BrandsModel> BrandsModel { get; set; }
+        public List<Products> Products { get; set; }
         public HeaderViewModel Header { get; set; }
         public HomeModelOne HomeModelOne { get; set; }
         public HomeModelTwo HomeModelTwo { get; set; }

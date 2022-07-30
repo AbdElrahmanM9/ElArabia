@@ -218,8 +218,8 @@
     }
 
     .c-hamburger {
-        margin-top: -27px !important;
-        left: 134px;
+        margin-top: -44px !important;
+        left: 25px;
     }
 
     .sidenav {
@@ -450,7 +450,7 @@
 /************************************/
 @media (max-width: 400px) {
     .sidenav {
-        top: 205px;
+        top: 150px;
     }
 
     .leaderBoard {

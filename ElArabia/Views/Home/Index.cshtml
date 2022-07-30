@@ -15,9 +15,6 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -59,7 +56,56 @@
     </div>
 </div>
 
-<div class="container marketing my-5">
+<div class="row">
+
+
+    @foreach (var item in Model.Products)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-3 cheese-item text-center">
+            <h3><a href="#">@item.NameAr</a></h3>
+            <div class="cheese-image">
+                <div class="cheese-image-border">
+                    <a href="#">
+                        <img src="@Url.Content(item.Image)" alt="Gouda" title="Gouda">
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<div class="col-xs-12">
+    <div class="lined-div">
+        <h4><span>Brands</span></h4>
+        <p></p>
+    </div>
+</div>
+
+<div class="DivFore2 my-5">
+    <div class="container">
+        <div class="carousel5">
+            @foreach (var item in Model.BrandsModel)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = item.NameEn})'">
+                            <img class="pic-1" src="@Url.Content(item.Image)">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <div class="card-title"><h3>@item.NameEn</h3></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@*<div class="container marketing my-5">
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="gp__title title title--3">@Model.HomeModelOne.Title</h2>
@@ -102,33 +148,5 @@
         </div>
     </div>
 
-</div>
+</div>*@
 
-<div class="col-xs-12">
-    <div class="lined-div">
-        <h4><span>Brands</span></h4>
-        <p></p>
-    </div>
-</div>
-
-<div class="DivFore2 my-5">
-    <div class="container">
-        <div class="carousel5">
-            @foreach (var item in Model.BrandsModel)
-            {
-                <div class="card">
-                    <div class="card-header">
-                        <a onclick="location.href='@Url.Action("_MoreDetials", "Home" , new {NameEn = item.NameEn})'">
-                            <img class="pic-1" src="@Url.Content(item.Image)">
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-content">
-                            <div class="card-title"><h3>@item.NameEn</h3></div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
-</div>

@@ -64,6 +64,7 @@ namespace ElArabia.Controllers
             HomePageViewModel.HomeModelTwo = _Context.HomeModelTwo.FirstOrDefault();
             HomePageViewModel.HomeModelThree = _Context.HomeModelThree.FirstOrDefault();
             HomePageViewModel.BrandsModel = _Context.BrandsModel.ToList();
+            HomePageViewModel.Products = _Context.Products.Where(x => x.IsActive == true && x.IsDeleted == false).ToList();
 
             return View(HomePageViewModel);
         }
