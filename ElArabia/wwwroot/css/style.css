@@ -35,7 +35,7 @@ body {
     }
 .slick-prev,
 .slick-next {
-    background: #f9c623;
+    background: #ffffff;
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -45,7 +45,7 @@ body {
     .slick-prev:focus,
     .slick-next:hover,
     .slick-next:focus {
-        background: #f9c623;
+        background: #eee;
     }
 
 /* MARKETING CONTENT
@@ -562,9 +562,9 @@ body {
         font-size: 3.5rem;
     }
 }
-.container {
-    max-width: 960px;
-}
+/*.container {
+    max-width: 1170px;
+}*/
 
 /*
  * Custom translucent site header
@@ -778,6 +778,22 @@ body {
 }
 
 /*---------------------------------------------------------------Change Colors---------------------------------------------------*/
+
+.color-menu > span {
+    position: absolute;
+    right: -50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--maincolor);
+    background: #fff;
+    border-left: 1px solid #eee;
+    top: 0;
+    box-shadow: 7px 2px 14px 0 rgba(0, 0, 0, .14)
+}
 
 .color-menu .switch-colors li {
     width: 33px;

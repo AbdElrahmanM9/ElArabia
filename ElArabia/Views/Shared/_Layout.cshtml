@@ -10,12 +10,18 @@
     <link href="~/css/slick.css" rel="stylesheet" />
     <link href="~/css/slick-theme.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/NewStyle.css" rel="stylesheet" />
+    <link href="~/css/Responsive.css" rel="stylesheet" />
+    <link href="~/css/navbar.less" rel="stylesheet" />
+    <link href="~/css/nav.less" rel="stylesheet" />
     <script src="~/js/jquery-3.4.1.min.js"></script>
     <script src="~/js/checkout.js"></script>
     <script src="~/js/toast.min.js"></script>
 
     <style>
-
+        .pull-left {
+            float: left !important;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +49,75 @@
     </div>
 
     <header>
+        <div id="header">
+            <div class="container">
+                <a>
+                    <h1 class="logo" title="El-Arabia"></h1>
+                </a>
+
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                    @*<div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>*@
+                    <button class="c-hamburger c-hamburger--htx hidden-md hidden-lg" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+
+                    </button>
+                    <div class="collapse navbar-collapse js-navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cheeses by Category <span></span></a>
+                                <ul class="dropdown-menu" role="menu" style="display: none;">
+                                    <li id="cheese-by-type-link"><a href="/by_type/?per_page=20">Cheeses by type</a></li>
+                                    <li id="cheese-by-country-link"><a href="/by_country/?per_page=20">Cheeses by country</a></li>
+                                    <li id="cheese-by-milk-link"><a href="/by_milk/?per_page=20">Cheeses by milk</a></li>
+                                    <li id="cheese-by-texture-link"><a href="/by_texture/?per_page=20">Cheeses by texture</a></li>
+                                    <li id="cheese-by-color-link"><a href="/by_color/?per_page=20">Cheeses by color</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a>@ElArabia.Resource.StoreAr.OurRecipes</a>
+                            </li>
+                            <li>
+                                <a href="#">@ElArabia.Resource.StoreAr.OurStory</a>
+                            </li>
+                            <li>
+                                <a href="#">@ElArabia.Resource.StoreAr.CheeseMagic</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="top-search" class="search-bar">
+                    <form action="/" method="get" class="pull-left">
+                        <div class="input-group search-form">
+                            <input type="text" class="form-control" id="search-church" value="Craving for some cheese? Search here!" name="q" onfocus="if( this.value == 'Craving for some cheese? Search here!' ) this.value = '';" onblur="if( this.value == '' ) this.value = 'Craving for some cheese? Search here!';">
+                            <span class="input-group-btn">
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <div id="social-links">
+                        <a href="https://www.facebook.com/mostafa.tito.1829" target="_blank">
+                            <i class="fa-brands fa-facebook-square IconFooter"></i>
+                        </a>
+                        @*<a id="ham-button" class="c-hamburger c-hamburger--htx hidden-md hidden-lg">
+                            <span>toggle menu</span>
+                        </a>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    @*<header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:#f9c623">
             <a class="navbar-brand" href="~/Home/Index"><img src="~/Images/Logo/back sahdaow.png" style="width:65px;height:35px;" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,9 +217,9 @@
             </div>
         </nav>
 
-    </header>
+    </header>*@
 
-    <div class="container my-5">
+    <div class="container">
         <main role="main" class="pb-3 my-lg-5">
             @RenderBody()
         </main>
@@ -152,24 +227,32 @@
 
     <footer class="border-top footer text-muted bg-transparent">
         <div class="container body-content" id="bodyFooter">
-            <div class="row" style="position: relative; ">
-                <div class="col-md-4 my-5">
-                    <a href="https://www.facebook.com/mostafa.tito.1829" target="_blank">
-                        <i class="fa-brands fa-facebook-square IconFooter"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 my-5">
-                    <a href="#">
-                        <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 my-5">
-                    <a href="#">
-                        <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
-                    </a>
+            @*<div class="row" style="position: relative; ">
+            <div class="col-md-4 my-5">
+                <a href="https://www.facebook.com/mostafa.tito.1829" target="_blank">
+                    <i class="fa-brands fa-facebook-square IconFooter"></i>
+                </a>
+            </div>
+            <div class="col-md-4 my-5">
+                <a href="#">
+                    <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
+                </a>
+            </div>
+            <div class="col-md-4 my-5">
+                <a href="#">
+                    <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
+                </a>
+            </div>
+        </div>*@
+            @*<p class="float-right my-5" style="font-size: 25px;"><a style="color:black m-md-2;" href="#" class="fa-solid fa-arrow-up-from-bracket" title="Back to top"></a></p>*@
+            <div id="back-to-top">
+                <p>BACK TO</p>
+                <div id="line2">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <p>TOP</p>
                 </div>
             </div>
-            <p class="float-right my-5" style="font-size: 25px;"><a style="color:Black m-md-2;" href="#" class="fa-solid fa-arrow-up-from-bracket" title="Back to top"></a></p>
+
             <p id="Footer">&copy; El-Arabia - @DateTime.Now.Year</p>
         </div>
     </footer>
