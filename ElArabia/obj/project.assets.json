@@ -6148,19 +6148,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Abd El-Rahman\\.nuget\\packages\\": {}
+    "C:\\Users\\Negm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ASP.NET\\Projects\\ElArabia\\ElArabia\\ElArabia.csproj",
+      "projectUniqueName": "G:\\AbdElrahman\\Project\\ElArabia\\ElArabia\\ElArabia.csproj",
       "projectName": "ElArabia",
-      "projectPath": "D:\\ASP.NET\\Projects\\ElArabia\\ElArabia\\ElArabia.csproj",
-      "packagesPath": "C:\\Users\\Abd El-Rahman\\.nuget\\packages\\",
-      "outputPath": "D:\\ASP.NET\\Projects\\ElArabia\\ElArabia\\obj\\",
+      "projectPath": "G:\\AbdElrahman\\Project\\ElArabia\\ElArabia\\ElArabia.csproj",
+      "packagesPath": "C:\\Users\\Negm\\.nuget\\packages\\",
+      "outputPath": "G:\\AbdElrahman\\Project\\ElArabia\\ElArabia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Abd El-Rahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Negm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6221,12 +6221,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.25, 3.1.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6235,7 +6229,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
