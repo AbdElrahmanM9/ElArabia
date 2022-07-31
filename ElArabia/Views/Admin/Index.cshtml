@@ -11,16 +11,13 @@
     }
 </style>
 
-<div id="myCarousel" class="carousel slide mt-5" data-ride="carousel">
+<div id="myCarousel" class="carousel slide mt-5 my-5" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-        <li data-target="#myCarousel" data-slide-to="5"></li>
     </ol>
-    <button onclick="location.href='@Url.Action("_EditHeader", "Admin")'"  class="btn btn-light col-lg-12  mt-5">Edit Header</button>
+    <button onclick="location.href='@Url.Action("_EditHeader", "Admin")'" class="btn btn-light col-lg-12  mt-5">Edit Header</button>
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="@Url.Content(Model.Header.IMG1)" />
@@ -33,16 +30,6 @@
         <div class="carousel-item">
             <img src="@Url.Content(Model.Header.IMG3)" />
         </div>
-        <div class="carousel-item">
-            <img src="@Url.Content(Model.Header.IMG4)" />
-        </div>
-        <div class="carousel-item">
-            <img src="@Url.Content(Model.Header.IMG5)" />
-        </div>
-        <div class="carousel-item">
-            <img src="@Url.Content(Model.Header.IMG6)" />
-        </div>
-
     </div>
     <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,50 +41,28 @@
     </button>
 </div>
 
-<div class="container marketing my-5">
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="gp__title title title--3">@Model.HomeModelOne.Title</h2>
-            <p class="lead">@Model.HomeModelOne.Description</p>
-            <p class="gp__description"><a class="gp__cta btn btn--orange" href="#" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
-        </div>
-        <div class="col-md-5">
-            <a class="bd-placeholder-img" href="~/Admin/_EditModelOne">
-                <img src="@Url.Content(Model.HomeModelOne.IMG)" />
-            </a>
-        </div>
+@*<div class="row justify-content-md-center">
+    <div class="col-lg-1">
+        <a data-toggle="modal" data-target="#basicExampleModal01" id="AddItem" style="position: absolute; z-index: 999;">
+            <img class="svg-icon" src="~/Images/Home/036-add.svg" title="add" />
+        </a>
+
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">@Model.HomeModelTwo.Title</h2>
-            <p class="lead">@Model.HomeModelTwo.Description</p>
+</div>*@
+<div class="row my-5">
+    @foreach (var item in Model.Products)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-3 cheese-item text-center">
+            <h3><a href="#">@item.NameAr</a></h3>
+            <div class="cheese-image">
+                <div class="cheese-image-border">
+                    <a onclick="location.href='@Url.Action("_Details", "Admin" , new {Id = item.Id})'">
+                        <img src="@Url.Content(item.Image)" alt="Gouda" title="Gouda">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-5 order-md-1">
-            <a class="bd-placeholder-img" title="#" href="~/Admin/_EditModelTwo">
-                <img src="@Url.Content(Model.HomeModelTwo.IMG)" />
-            </a>
-
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">@Model.HomeModelThree.Title</h2>
-            <p class="lead">@Model.HomeModelThree.Description</p>
-        </div>
-        <div class="col-md-5">
-            <a class="bd-placeholder-img" title="#" href="~/Admin/_EditModelThree">
-                <img src="@Url.Content(Model.HomeModelThree.IMG)" />
-            </a>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
+    }
 
 </div>
 
@@ -122,3 +87,50 @@
         </div>
     </div>
 </div>
+
+@*<div class="container marketing my-5">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="gp__title title title--3">@Model.HomeModelOne.Title</h2>
+                <p class="lead">@Model.HomeModelOne.Description</p>
+                <p class="gp__description"><a class="gp__cta btn btn--orange" href="#" style="background-color: #f9c623;color:#ff0000">اكتشفوا جميع انواع الجبنة &raquo;</a></p>
+            </div>
+            <div class="col-md-5">
+                <a class="bd-placeholder-img" href="~/Admin/_EditModelOne">
+                    <img src="@Url.Content(Model.HomeModelOne.IMG)" />
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">@Model.HomeModelTwo.Title</h2>
+                <p class="lead">@Model.HomeModelTwo.Description</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <a class="bd-placeholder-img" title="#" href="~/Admin/_EditModelTwo">
+                    <img src="@Url.Content(Model.HomeModelTwo.IMG)" />
+                </a>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">@Model.HomeModelThree.Title</h2>
+                <p class="lead">@Model.HomeModelThree.Description</p>
+            </div>
+            <div class="col-md-5">
+                <a class="bd-placeholder-img" title="#" href="~/Admin/_EditModelThree">
+                    <img src="@Url.Content(Model.HomeModelThree.IMG)" />
+                </a>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+    </div>*@

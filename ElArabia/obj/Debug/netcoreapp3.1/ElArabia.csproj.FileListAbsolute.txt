@@ -766,8 +766,6 @@ G:\AbdElrahman\Project\ElArabia\ElArabia\bin\Debug\netcoreapp3.1\runtimes\unix\l
 G:\AbdElrahman\Project\ElArabia\ElArabia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 G:\AbdElrahman\Project\ElArabia\ElArabia\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.csproj.AssemblyReference.cache
-G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.Models.Resource.Store.resources
-G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.Models.Resource.StoreAr.resources
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.Resource.Store.resources
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.Resource.StoreAr.resources
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.csproj.GenerateResource.cache
@@ -787,10 +785,7 @@ G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.TagHel
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.RazorCoreGenerate.cache
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
-G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AddNewProduct.cshtml.g.cs
-G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AllProducts.cshtml.g.cs
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditHeader.cshtml.g.cs
-G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditItem.cshtml.g.cs
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelOne.cshtml.g.cs
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelThree.cshtml.g.cs
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditModelTwo.cshtml.g.cs
@@ -816,3 +811,14 @@ G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.csproj
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.dll
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.pdb
 G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\ElArabia.genruntimeconfig.cache
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AddNewProductDetails.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AddNewProductMaster.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AllProductsDetails.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AllProductsMaster.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditItemDetails.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_EditItemMaster.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_Details.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_Details.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Home\_DetialsByDetial.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_DetialsByDetial.cshtml.g.cs
+G:\AbdElrahman\Project\ElArabia\ElArabia\obj\Debug\netcoreapp3.1\Razor\Views\Admin\_AddPictureAfterPreparation.cshtml.g.cs

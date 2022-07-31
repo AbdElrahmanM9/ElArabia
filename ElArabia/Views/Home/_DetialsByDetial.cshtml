@@ -1,0 +1,95 @@
+﻿@model ElArabia.ViewModel.ItemsListViewModel
+
+@{
+    ViewBag.Title = "More Detials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+@{
+    var DetailId = Model.ProductsDetail.Id;
+}
+<div class="row">
+    <div class="col-sm-12 col-sm-push-3">
+        <div class="catalog">
+            <div class="detail">
+                <div class="unit">
+                    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light my-5">
+
+                        <img class="pic-1 m-5" src="@Url.Content(Model.ProductsDetail.Image)" style=" height: 300px; border-radius: 21px 21px 0 0;">
+                        <h1 class="display-4 font-weight-normal">@Model.ProductsDetail.NameAr</h1>
+                        <p class="lead font-weight-normal">@Model.ProductsDetail.Description</p>
+                        @if (@Model.ProductsDetail.Prepare != "#")
+                        {
+                            <a class="btn btn-outline-secondary" src="#" target="_blank" href="@Model.ProductsDetail.Prepare">طريقة التحضير</a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-secondary" src="#" href="@Model.ProductsDetail.Prepare">طريقة التحضير</a>
+                        }
+                    </div>
+                    @if (Model.PrepareIMG.Count != 0)
+                    {
+                        <div class="summary">
+                            <div class="description">
+
+                                <div class="col-xs-12 my-5">
+                                    <div class="lined-div">
+                                        <h4><span>بعد التحضير</span></h4>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model.PrepareIMG)
+                            {
+                                <div class="col-sm-6 col-md-4 col-lg-3 cheese-item text-center">
+                                    <div class="cheese-image">
+                                        <div class="cheese-image-border">
+                                            <a>
+                                                <img style="border: 0px;" class="tweet_thumb" src="@Url.Content(item.IMG)">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-xs-12 my-5">
+    <div class="lined-div">
+        <h4><span>منتجاتنا</span></h4>
+        <p></p>
+    </div>
+</div>
+
+<div class="DivFore2">
+    <div class="container">
+        <div class="carousel5">
+            @foreach (var item in Model.ProductsDetails)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <a onclick="location.href='@Url.Action("_DetialsByDetial", "Home" , new {NameEn = item.NameEn , Id = item.Id})'">
+                            <img class="pic-1" src="@Url.Content(item.Image)">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <div class="card-title"><h3>@item.NameAr</h3></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

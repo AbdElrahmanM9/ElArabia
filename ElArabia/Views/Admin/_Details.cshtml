@@ -1,0 +1,135 @@
+﻿@model ElArabia.ViewModel.ItemsListViewModel
+
+@{
+    ViewBag.Title = "More Detials";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+@{
+    var DetailId = Model.ProductsDetails.FirstOrDefault().Id;
+}
+<div class="row">
+    <div class="col-sm-12 col-sm-push-3">
+        <div class="catalog">
+            <div class="detail">
+                <div class="unit">
+                    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light my-5">
+
+                        <img class="pic-1 m-5" src="@Url.Content(Model.product.Image)" style=" height: 300px; border-radius: 21px 21px 0 0;">
+                        <h1 class="display-4 font-weight-normal">@Model.product.NameAr</h1>
+                        <p class="lead font-weight-normal">@Model.product.Description</p>
+                        <a class="btn btn-outline-secondary" onclick="location.href='@Url.Action("_AddPictureAfterPreparation", "Admin" , new {Id = DetailId})'">إضافة صور التحضير</a>
+                        
+                    </div>
+
+                    <div class="summary">
+                        <div class="description">
+                            @*@using (Html.BeginForm("AddPrepareIMG", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "AddForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="bd-example5 my-5" id="ItemsTable">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                    <div class="form-group">
+                                        <div class="col-md-10">
+                                            <input type="file" name="upload" class="control-label col-md-4 subscribe btn btn-light btn-lg btn-block" />
+                                        </div>
+                                    </div>
+                                    <input type="hidden" @Html.EditorFor(model => model.ProductsDetails.FirstOrDefault().Id, new { htmlAttributes = new { @class = "form-control" } }) />
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Save" class="btn btn-success" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }*@
+                        </div>
+                    </div>
+                    @if (Model.PrepareIMG.Count != 0)
+                    {
+                        <div class="col-xs-12 my-5">
+                            <div class="lined-div">
+                                <h4><span>بعد التحضير</span></h4>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            @foreach (var item in Model.PrepareIMG)
+                            {
+                                <div class="col-sm-6 col-md-4 col-lg-3 cheese-item text-center">
+                                    <div class="cheese-image">
+                                        <div class="cheese-image-border">
+                                            <a>
+                                                <img style="border: 0px;" class="tweet_thumb" src="@Url.Content(item.IMG)">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-xs-12 my-5">
+    <div class="lined-div">
+        <h4><span>منتجاتنا</span></h4>
+        <p></p>
+    </div>
+</div>
+
+<div class="DivFore2">
+    <div class="container">
+        <div class="carousel5">
+            @foreach (var item in Model.ProductsDetails)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <a onclick="location.href='@Url.Action("_DetialsByDetial", "Admin" , new {NameEn = item.NameEn , Id = item.Id})'">
+                            <img class="pic-1" src="@Url.Content(item.Image)">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-content">
+                            <div class="card-title"><h3>@item.NameAr</h3></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 my-5">
+    <div class="lined-div">
+        <h4><span>منتجاتنا</span></h4>
+        <p></p>
+    </div>
+</div>
+
+<div class="row">
+
+
+    @foreach (var item in Model.ProductsDetails)
+    {
+        <div class="col-sm-6 col-md-4 col-lg-3 cheese-item text-center">
+            <h3><a href="#">@item.NameAr</a></h3>
+            <div class="cheese-image">
+                <div class="cheese-image-border">
+                    <a onclick="location.href='@Url.Action("_Details", "Admin" , new {NameEn = item.NameEn, Id = item.Id})'">
+                        <img src="@Url.Content(item.Image)" alt="@item.NameAr" title="@item.NameAr">
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

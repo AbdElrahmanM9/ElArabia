@@ -10,30 +10,35 @@
     <link href="~/css/slick.css" rel="stylesheet" />
     <link href="~/css/slick-theme.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
-    <script src="~/js/jquery-3.4.1.min.js"></script>
-    <script src="~/js/checkout.js"></script>
-    <script src="~/js/toast.min.js"></script>
+    <link href="~/css/NewStyle.css" rel="stylesheet" />
+    <link href="~/css/Responsive.css" rel="stylesheet" />
 
     <style>
         .Black {
             color: #000000;
-        } 
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="~/Admin/Index"><img src="~/Images/Logo/gold sahdaow.png" style="width:65px;height:35px;" /></a>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding: 8px;">
+            <a class="navbar-brand" href="~/Admin/Index"><img src="~/Images/Logo/gold sahdaow.png" style="width:95px;height:55px;" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProduct", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AddProduct</a>
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProductMaster", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AddProductMaster</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProducts", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AllProducts</a>
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProductsMaster", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AllProductsMaster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AddNewProductDetails", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AddProductDetails</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='@Url.Action("_AllProductsDetails", "Admin")'" style="color:#ffffff;">@ElArabia.Resource.StoreAr.AllProductsDetails</a>
                     </li>
                 </ul>
             </div>
@@ -41,7 +46,7 @@
 
     </header>
 
-    <div class="container my-3">
+    <div class="container my-5">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -50,22 +55,22 @@
     <footer class="border-top footer text-muted">
         <div class="container body-content" id="bodyFooter">
             @*<div class="row" style="position: relative; ">
-                <div class="col-md-4 my-5">
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-square IconFooter"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 my-5">
-                    <a href="#">
-                        <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
-                    </a>
-                </div>
-                <div class="col-md-4 my-5">
-                    <a href="#">
-                        <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
-                    </a>
-                </div>
-            </div>*@
+                    <div class="col-md-4 my-5">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-square IconFooter"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-4 my-5">
+                        <a href="#">
+                            <i style="color:rgb(211 50 50)" class="fa-brands fa-instagram IconFooter"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-4 my-5">
+                        <a href="#">
+                            <i style="color:deepskyblue" class="fa-brands fa-twitter IconFooter"></i>
+                        </a>
+                    </div>
+                </div>*@
             <p class="float-right my-5" style="font-size: 25px;">
                 <a style="color:Black m-md-2;" href="#" class="fa-solid fa-arrow-up-from-bracket" title="Back to top"></a>
             </p>
@@ -75,6 +80,9 @@
 
     <script src="~/js/jquery.min.js.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/checkout.js"></script>
+    <script src="~/js/toast.min.js"></script>
     <script src="~/js/slick.min.js"></script>
     <script src="~/js/custom.js"></script>
 </body>

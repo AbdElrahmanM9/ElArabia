@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddProduct" xml:space="preserve">
-    <value>إضافة منتج</value>
+  <data name="AddProductDetails" xml:space="preserve">
+    <value>إضافة منتج فرعي</value>
   </data>
-  <data name="AllProducts" xml:space="preserve">
-    <value>عرض المنجات</value>
+  <data name="AddProductMaster" xml:space="preserve">
+    <value>إضافة منتج اساسي</value>
+  </data>
+  <data name="AllProductsDetails" xml:space="preserve">
+    <value>عرض المنتجات الفرعية</value>
+  </data>
+  <data name="AllProductsMaster" xml:space="preserve">
+    <value>عرض المنجات الاساسية</value>
   </data>
   <data name="CheeseMagic" xml:space="preserve">
     <value>سحر الجبن</value>

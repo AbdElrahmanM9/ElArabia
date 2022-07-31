@@ -60,9 +60,9 @@ namespace ElArabia.Controllers
                 Counter++;
             }
             HomePageViewModel.Header = header;
-            HomePageViewModel.HomeModelOne = _Context.HomeModelOne.FirstOrDefault();
-            HomePageViewModel.HomeModelTwo = _Context.HomeModelTwo.FirstOrDefault();
-            HomePageViewModel.HomeModelThree = _Context.HomeModelThree.FirstOrDefault();
+            //HomePageViewModel.HomeModelOne = _Context.HomeModelOne.FirstOrDefault();
+            //HomePageViewModel.HomeModelTwo = _Context.HomeModelTwo.FirstOrDefault();
+            //HomePageViewModel.HomeModelThree = _Context.HomeModelThree.FirstOrDefault();
             HomePageViewModel.BrandsModel = _Context.BrandsModel.ToList();
             HomePageViewModel.Products = _Context.Products.Where(x => x.IsActive == true && x.IsDeleted == false).ToList();
 
@@ -73,7 +73,7 @@ namespace ElArabia.Controllers
         {
             ItemsListViewModel ItemsListViewModel = new ItemsListViewModel();
 
-            ItemsListViewModel.product = _Context.Products.Include(x=>x.Brand).FirstOrDefault(x => x.NameEn.Contains(NameEn)||x.Brand.NameEn.Contains(NameEn));
+            ItemsListViewModel.product = _Context.Products.Include(x => x.Brand).FirstOrDefault(x => x.NameEn.Contains(NameEn) || x.Brand.NameEn.Contains(NameEn));
             if (ItemsListViewModel.product != null)
             {
                 ItemsListViewModel.products = _Context.Products.Where(x => x.BrandId == ItemsListViewModel.product.BrandId && x.IsDeleted == false && x.IsActive == true).ToList();
@@ -87,6 +87,59 @@ namespace ElArabia.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult _Details(string NameEn, int? Id)
+        {
+            ItemsListViewModel ItemsListViewModel = new ItemsListViewModel();
+
+            ItemsListViewModel.product = _Context.Products.Include(x => x.Brand).FirstOrDefault(x => x.NameEn.Contains(NameEn) || x.Brand.NameEn.Contains(NameEn) || x.Id == Id.Value);
+            var ProductId = ItemsListViewModel.product.Id;
+            if (ItemsListViewModel.product != null)
+            {
+                ItemsListViewModel.ProductsDetails = _Context.ProductsDetails.Where(x => x.ProductId == ProductId && x.IsDeleted == false && x.IsActive == true).ToList();
+                if (ItemsListViewModel.ProductsDetails != null)
+                {
+                    foreach (var item in ItemsListViewModel.ProductsDetails)
+                    {
+                        item.Prepare = item.Prepare != null ? item.Prepare : "#";
+                    }
+                }
+
+                var ProductsDetailId = ItemsListViewModel.ProductsDetails.FirstOrDefault().Id;
+
+                ItemsListViewModel.PrepareIMG = _Context.PrepareIMG.Where(x => x.ProductsDetailId == ProductsDetailId).ToList();
+
+                return PartialView(ItemsListViewModel);
+            }
+
+            return RedirectToAction("Index");
+
+        }
+        public ActionResult _DetialsByDetial(int Id)
+        {
+            ItemsListViewModel ItemsListViewModel = new ItemsListViewModel();
+
+            ItemsListViewModel.ProductsDetail = _Context.ProductsDetails.Include(x => x.Product).FirstOrDefault(x => x.Id == Id);
+            var ProductId = ItemsListViewModel.ProductsDetail.ProductId;
+            if (ItemsListViewModel.ProductsDetail != null)
+            {
+                ItemsListViewModel.products = _Context.Products.Where(x => x.Id == ProductId && x.IsDeleted == false && x.IsActive == true).ToList();
+                if (ItemsListViewModel.ProductsDetail != null)
+                {
+                    var Prepare = ItemsListViewModel.ProductsDetail.Prepare;
+                    ItemsListViewModel.ProductsDetail.Prepare = Prepare != null ? Prepare : "#";
+                }
+                ItemsListViewModel.ProductsDetails = _Context.ProductsDetails.Where(x => x.ProductId == ProductId);
+                var ProductsDetailId = ItemsListViewModel.ProductsDetail.Id;
+
+                ItemsListViewModel.PrepareIMG = _Context.PrepareIMG.Where(x => x.ProductsDetailId == ProductsDetailId).ToList();
+
+                return PartialView(ItemsListViewModel);
+            }
+
+            return RedirectToAction("Index");
+
+        }
+
         public ActionResult _AllKindsCheese()
         {
             List<Products> Products = new List<Products>();

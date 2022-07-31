@@ -61,20 +61,38 @@ namespace ElArabia.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to إضافة منتج.
+        ///   Looks up a localized string similar to إضافة منتج فرعي.
         /// </summary>
-        public static string AddProduct {
+        public static string AddProductDetails {
             get {
-                return ResourceManager.GetString("AddProduct", resourceCulture);
+                return ResourceManager.GetString("AddProductDetails", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to عرض المنجات.
+        ///   Looks up a localized string similar to إضافة منتج اساسي.
         /// </summary>
-        public static string AllProducts {
+        public static string AddProductMaster {
             get {
-                return ResourceManager.GetString("AllProducts", resourceCulture);
+                return ResourceManager.GetString("AddProductMaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عرض المنتجات الفرعية.
+        /// </summary>
+        public static string AllProductsDetails {
+            get {
+                return ResourceManager.GetString("AllProductsDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عرض المنجات الاساسية.
+        /// </summary>
+        public static string AllProductsMaster {
+            get {
+                return ResourceManager.GetString("AllProductsMaster", resourceCulture);
             }
         }
         

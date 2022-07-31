@@ -17,6 +17,8 @@ namespace ElArabia.ViewModel
         public int BrandId { get; set; }
         public BrandsModel Brand { get; set; }
         public string Prepare { get; set; }
+        public int ProductId { get; set; }
+        public Products Product { get; set; }
 
     }
 }
